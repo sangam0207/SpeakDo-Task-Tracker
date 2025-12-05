@@ -1,0 +1,23 @@
+{
+  "name": "SpeakDo",
+  "version": "1.0.0",
+  "description": "Quick to say, clear purpose - speak your to-dos.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Sangam Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.4.5",
+    "openai": "^6.9.1"
+  }
+}

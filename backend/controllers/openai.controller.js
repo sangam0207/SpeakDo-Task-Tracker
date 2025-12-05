@@ -1,7 +1,7 @@
 import ErrorResponse from "../lib/error.res.js";
 import successRes from "../lib/success.res.js";
-import { parseTranscriptWithOpenAI } from "../service/openai.service.js";
-
+// import { parseTranscriptWithOpenAI } from "../service/openai.service.js";
+import { parseTranscriptWithGroq } from "../service/openai.service.js"
 export const parseTranscript = async (req, res, next) => {
   try {
     const { text } = req.body;
@@ -10,7 +10,7 @@ export const parseTranscript = async (req, res, next) => {
       return next(ErrorResponse.badRequest("Text input is required"));
     }
 
-    const parsedData = await parseTranscriptWithOpenAI(text);
+    const parsedData = await parseTranscriptWithGroq(text);
    console.log("Parsed Data:", parsedData);
     if (parsedData) {
       successRes.ok(res, 
